@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/download-removebg-preview.png">
+    <title>NyumBook</title>
+</head>
+<body>
+    
+    <div class="marquee-section">
+        <div class="marquee-div">
+            <div class="marquee"> I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;I <span style="color:red">♥</span> MY Bf &nbsp; &nbsp; &nbsp; &nbsp;</div>
+        </div>
+    </div>
+
+    <container>
+        
+        <div class="center">
+            <br>
+            <br>
+            
+                <label for="fname" style="margin-top:30px;" class="fname">What is your name?</label><br>
+                <input type="text" id="user" name="fname" placeholder=" name ♥" style="margin-top:30px; border-radius:20px; height:30px; width:140px; font-size:18px; font-family:serif; padding-left:5px;"><br>
+                <button  class="button-46" onclick="DoAnimation()">Submit!</button>
+
+                <button  class="button-47" onclick="doMath()" style="margin-left:47%;">Go!</button>
+                <p class="txt">Mad shit input g eat normally first and then fill</p>
+    
+            </container>
+    <div class="all" id="myLogo"></div>
+
+
+    <script>
+        
+        var every = document.querySelector('.all');
+        let myLogo = document.getElementById('myLogo');
+        var fname = document.querySelector('.fname');
+        var button46 = document.querySelector(".button-46");
+        var button47 = document.querySelector(".button-47");
+        var txt = document.querySelector(".txt");
+        function DoAnimation() {
+            var user= document.querySelector('#user');
+                if(user.value==='Hashim' || user.value==='hashim'){
+                    every.style.display="block";
+                    every.style.backgroundImage = "url('img/background.png')";
+
+                    var delayInMilliseconds = 500; //1 second
+
+setTimeout(function() {
+    fname.innerHTML = "How many times did you eat today?";
+   user.type="number";
+    user.placeholder = "times";
+    button46.style.display="none";
+    button47.style.display="block";
+
+    user.addEventListener('keyup', function(){
+        if(user.value<2){
+            user.style.border = '4px solid red';
+            txt.style.display="block";
+        }else{
+            user.style.border = '2px solid #EEE5E9';
+            txt.style.display="none";
+        }
+    })
+
+}, delayInMilliseconds);
+
+    button47.addEventListener('click', function(){
+        if(user.value>=2){
+            window.location.replace("https://www.youtube.com/watch?v=RSer4TuwAZA");
+        }else{
+            window.location.replace("https://www.youtube.com/watch?v=DNR2AY7b6kI");
+        }
+    })
+
+
+                    
+}else{
+    alert('you arent my bf');
+    alert('gtfo');
+    window.close()
+}
+  
+}
+    </script>
+</body>
+</html>
